@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kunjungan Industri & Kokurikuler - ISI Surakarta & Solo Tour</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts & Typography Essentials -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Playfair+Display:ital,wght@0,600;0,800;1,600;1,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pastel: {
+                            50: '#f2f8f4',
+                            100: '#e3f0e6',
+                            200: '#c6e1cd',
+                            300: '#a1ccab',
+                            400: '#75b182',
+                            500: '#519460',
+                            600: '#3e764b',
+                            900: '#1d3824',
+                        },
+                        maroon: {
+                            50: '#fdf2f4',
+                            100: '#fbe5e8',
+                            200: '#f7cee2',
+                            300: '#f0a7b7',
+                            400: '#e26b84',
+                            500: '#ce3d5e',
+                            600: '#b42647',
+                            700: '#801830', /* Deep Aesthetic Maroon */
+                            800: '#681327',
+                            900: '#520e1e',
+                            950: '#340610',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Font Definitions for Goldy Burst & Recoleta */
+        @font-face {
+            font-family: 'Goldy Burst';
+            src: local('Goldy Burst'), url('https://fonts.cdnfonts.com/s/93121/GoldyBurst.woff') format('woff');
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Recoleta';
+            src: local('Recoleta'), url('https://fonts.cdnfonts.com/s/29232/Recoleta-Regular.woff') format('woff');
+            font-display: swap;
+        }
+
+        body {
+            background-color: #f2f7f3;
+            color: #263329;
+            font-family: 'Recoleta', 'Fraunces', 'DM Serif Display', Georgia, serif;
+        }
+
+        .font-goldy {
+            font-family: 'Goldy Burst', 'Playfair Display', 'DM Serif Display', Georgia, serif;
+        }
+        
+        .font-recoleta {
+            font-family: 'Recoleta', 'Fraunces', 'DM Serif Display', Georgia, serif;
+        }
+
+        .font-sans-body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(198, 225, 205, 0.75);
+        }
+
+        .maroon-gradient {
+            background: linear-gradient(135deg, #801830 0%, #520e1e 100%);
+        }
+
+        .pastel-gradient {
+            background: linear-gradient(135deg, #e3f0e6 0%, #c6e1cd 100%);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #e3f0e6;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #801830;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-maroon-700 selection:text-white font-recoleta">
+
+    <header class="sticky top-0 z-50 glass-card border-b border-pastel-200 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-2xl maroon-gradient text-white flex items-center justify-center font-bold text-base shadow-md font-goldy">
+                    ISI
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold text-maroon-900 leading-none font-goldy tracking-wide">Kunjungan Industri & Kokurikuler</h1>
+                    <p class="text-[11px] text-pastel-600 font-medium font-sans-body mt-0.5">Solo 2026</p>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-1 text-xs font-semibold font-sans-body">
+                <a href="#destinasi" class="px-3 py-1.5 rounded-full text-gray-700 hover:text-maroon-700 hover:bg-pastel-100 transition">Destinasi & Maps</a>
+                <a href="#organisasi" class="px-3 py-1.5 rounded-full text-gray-700 hover:text-maroon-700 hover:bg-pastel-100 transition">Panitia</a>
+                <a href="#pj-siswa" class="px-3 py-1.5 rounded-full text-gray-700 hover:text-maroon-700 hover:bg-pastel-100 transition">Kelompok Pendamping</a>
+                <a href="#pj-destinasi" class="px-3 py-1.5 rounded-full text-gray-700 hover:text-maroon-700 hover:bg-pastel-100 transition">PJ Tempat</a>
+                <a href="#rundown" class="px-3 py-1.5 rounded-full text-gray-700 hover:text-maroon-700 hover:bg-pastel-100 transition">Rundown</a>
+                <a href="#tatatertib" class="px-3 py-1.5 rounded-full text-maroon-700 bg-maroon-50 font-bold border border-maroon-200 hover:bg-maroon-100 transition">Tata Tertib</a>
+            </nav>
+
+            <a href="#rundown" class="md:hidden maroon-gradient text-white text-xs font-semibold px-3.5 py-2 rounded-xl shadow hover:opacity-90 transition flex items-center gap-1.5 font-sans-body">
+                <i class="fa-solid fa-clock"></i> Rundown
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden py-12 md:py-16 px-4 bg-gradient-to-b from-pastel-100 via-pastel-50 to-transparent">
+            <div class="max-w-4xl mx-auto text-center relative z-10">
+                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-maroon-100 text-maroon-800 text-xs font-bold mb-4 border border-maroon-200 shadow-sm font-sans-body">
+                    <i class="fa-solid fa-compass text-maroon-700"></i> Panduan Resmi Kegiatan Kunjungan Industri & Kokurikuler
+                </span>
+                
+                <h2 class="text-3xl md:text-5xl font-bold text-maroon-950 mb-4 leading-tight font-goldy">
+                    Eksplorasi Seni, Budaya & <br class="hidden sm:inline"><span class="text-maroon-700 italic">Destinasi Ikonik Solo</span>
+                </h2>
+                
+                <p class="text-sm md:text-base text-gray-700 max-w-2xl mx-auto mb-8 leading-relaxed font-sans-body">
+                    Selamat datang di Web Panduan Kunjungan Industri ke <strong>ISI Surakarta</strong> dan rangkaian perjalanan ke destinasi unggulan Kota Solo. Gunakan website ini untuk mengecek lokasi Google Maps, kontak penanggung jawab, serta pembagian kelompok pendamping siswa.
+                </p>
+
+                <!-- Key Metrics Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto text-left font-sans-body">
+                    <div class="glass-card p-3.5 rounded-2xl border-l-4 border-l-maroon-700 shadow-sm">
+                        <p class="text-[10px] text-gray-500 font-bold uppercase tracking-wider">Tujuan Utama</p>
+                        <p class="text-xs font-bold text-maroon-900 mt-0.5">ISI Surakarta</p>
+                    </div>
+                    <div class="glass-card p-3.5 rounded-2xl border-l-4 border-l-pastel-500 shadow-sm">
+                        <p class="text-[10px] text-gray-500 font-bold uppercase tracking-wider">Total Destinasi</p>
+                        <p class="text-xs font-bold text-gray-800 mt-0.5">5 Lokasi Populer</p>
+                    </div>
+                    <div class="glass-card p-3.5 rounded-2xl border-l-4 border-l-maroon-700 shadow-sm">
+                        <p class="text-[10px] text-gray-500 font-bold uppercase tracking-wider">Armada Perjalanan</p>
+                        <p class="text-xs font-bold text-maroon-900 mt-0.5">1 Bus Utama</p>
+                    </div>
+                    <div class="glass-card p-3.5 rounded-2xl border-l-4 border-l-pastel-500 shadow-sm">
+                        <p class="text-[10px] text-gray-500 font-bold uppercase tracking-wider">Akses Peta</p>
+                        <p class="text-xs font-bold text-gray-800 mt-0.5">Google Maps Direct</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="destinasi" class="py-10 px-4 max-w-5xl mx-auto">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-9 h-9 rounded-xl maroon-gradient text-white flex items-center justify-center font-bold text-base shadow font-goldy">
+                    1
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold font-goldy text-maroon-900">Tempat Tujuan & Peta Navigasi</h3>
+                    <p class="text-xs text-pastel-600 font-sans-body">5 Lokasi Kunjungan Industri, Ibadah, Kuliner & Rekreasi</p>
+                </div>
+            </div>
+
+            <!-- Destinasi Filter Buttons -->
+            <div class="flex flex-wrap gap-2 mb-6 font-sans-body">
+                <button onclick="filterDestinasi('all')" class="dest-btn px-4 py-2 rounded-xl text-xs font-bold maroon-gradient text-white shadow-sm" id="btn-dest-all">
+                    Semua Tempat
+                </button>
+                <button onclick="filterDestinasi('isi')" class="dest-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-gray-700 hover:bg-pastel-100 border border-pastel-200" id="btn-dest-isi">
+                    1. ISI Surakarta
+                </button>
+                <button onclick="filterDestinasi('zayed')" class="dest-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-gray-700 hover:bg-pastel-100 border border-pastel-200" id="btn-dest-zayed">
+                    2. Masjid Syeikh Zayed
+                </button>
+                <button onclick="filterDestinasi('kampung')" class="dest-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-gray-700 hover:bg-pastel-100 border border-pastel-200" id="btn-dest-kampung">
+                    3. Kampung Kecil Solo
+                </button>
+                <button onclick="filterDestinasi('balekambang')" class="dest-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-gray-700 hover:bg-pastel-100 border border-pastel-200" id="btn-dest-balekambang">
+                    4. Taman Balekambang
+                </button>
+                <button onclick="filterDestinasi('lokananta')" class="dest-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-gray-700 hover:bg-pastel-100 border border-pastel-200" id="btn-dest-lokananta">
+                    5. Lokananta Bloc
+                </button>
+            </div>
+
+            <!-- Destinations Grid -->
+            <div class="space-y-6">
+                
+                <!-- 1. ISI Surakarta -->
+                <div id="card-dest-isi" class="dest-card glass-card p-6 rounded-3xl shadow-sm border border-pastel-200 transition-all">
+                    <div class="grid md:grid-cols-12 gap-6">
+                        <div class="md:col-span-7 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="bg-maroon-100 text-maroon-800 text-[11px] font-bold px-3 py-1 rounded-full font-sans-body border border-maroon-200">
+                                        <i class="fa-solid fa-graduation-cap mr-1"></i> Destinasi 1 • Kunjungan Utama
+                                    </span>
+                                    <span class="bg-pastel-100 text-pastel-900 text-[11px] font-bold px-2.5 py-1 rounded-full font-sans-body">
+                                        08.30 - 11.45 WIB
+                                    </span>
+                                </div>
+                                <h4 class="text-xl font-bold text-maroon-900 font-goldy mb-2">Institut Seni Indonesia (ISI) Surakarta</h4>
+                                <p class="text-xs text-gray-600 leading-relaxed font-sans-body mb-4">
+                                    Pusat perguruan tinggi seni ternama dengan fasilitas laboratorium seni rupa, studio desain grafis, panggung pertunjukan teater/tari, serta laboratorium multimedia dan animasi modern.
+                                </p>
+                                <div class="p-3 bg-pastel-50 rounded-2xl border border-pastel-200 mb-4 font-sans-body text-xs">
+                                    <p class="font-bold text-maroon-900 mb-1"><i class="fa-solid fa-route text-pastel-600 mr-1.5"></i> Estimasi Perjalanan:</p>
+                                    <p class="text-gray-600">Titik Kumpul Sekolah ➔ ISI Surakarta (2,5 jam perjalanan bus via Jalan Tol / Protokol).</p>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-wrap items-center gap-3 font-sans-body">
+                                <a href="https://maps.google.com/?cid=4847418931686536165" target="_blank" class="px-4 py-2 rounded-xl maroon-gradient text-white text-xs font-bold shadow hover:opacity-90 transition inline-flex items-center gap-2">
+                                    <i class="fa-solid fa-map-location-dot"></i> Buka Google Maps ISI
+                                </a>
+                                <span class="text-[11px] text-gray-500 italic"><i class="fa-solid fa-location-dot text-maroon-700 mr-1"></i> Jl. Ki Hajar Dewantara No.19, Jebres</span>
+                            </div>
+                        </div>
+
+                        <div class="md:col-span-5 rounded-2xl overflow-hidden border border-pastel-300 min-h-[200px] bg-pastel-100">
+                            <iframe class="w-full h-full min-h-[220px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.1528628042316!2d110.8529241!3d-7.5583152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a16fc044a8a47%3A0x43457dd5ecad3be5!2sISI%20Surakarta!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Masjid Sheikh Zayed -->
+                <div id="card-dest-zayed" class="dest-card glass-card p-6 rounded-3xl shadow-sm border border-pastel-200 transition-all">
+                    <div class="grid md:grid-cols-12 gap-6">
+                        <div class="md:col-span-7 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="bg-maroon-100 text-maroon-800 text-[11px] font-bold px-3 py-1 rounded-full font-sans-body border border-maroon-200">
+                                        <i class="fa-solid fa-mosque mr-1"></i> Destinasi 2 • Sholat Dzuhur & Wisata Religi
+                                    </span>
+                                    <span class="bg-pastel-100 text-pastel-900 text-[11px] font-bold px-2.5 py-1 rounded-full font-sans-body">
+                                        12.00 - 13.00 WIB
+                                    </span>
+                                </div>
+                                <h4 class="text-xl font-bold text-maroon-900 font-goldy mb-2">Masjid Sheikh Zayed Surakarta</h4>
+                                <p class="text-xs text-gray-600 leading-relaxed font-sans-body mb-4">
+                                    Masjid megah hadiah dari Pangeran UEA yang menjadi landmark kemegahan arsitektur Islam di Solo. Tempat pelaksanaan sholat Dzuhur berjamaah dan istirahat spiritual.
+                                </p>
+                                <div class="p-3 bg-pastel-50 rounded-2xl border border-pastel-200 mb-4 font-sans-body text-xs">
+                                    <p class="font-bold text-maroon-900 mb-1"><i class="fa-solid fa-route text-pastel-600 mr-1.5"></i> Estimasi Perjalanan:</p>
+                                    <p class="text-gray-600">ISI Surakarta ➔ Masjid Sheikh Zayed (~15 menit / 4.8 km via Jl. Ki Hajar Dewantara & Jl. A. Yani).</p>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-wrap items-center gap-3 font-sans-body">
+                                <a href="https://maps.google.com/?cid=12161498220948117789" target="_blank" class="px-4 py-2 rounded-xl maroon-gradient text-white text-xs font-bold shadow hover:opacity-90 transition inline-flex items-center gap-2">
+                                    <i class="fa-solid fa-map-location-dot"></i> Buka Google Maps Masjid Zayed
+                                </a>
+                                <span class="text-[11px] text-gray-500 italic"><i class="fa-solid fa-location-dot text-maroon-700 mr-1"></i> Jl. A. Yani No.121, Gilingan</span>
+                            </div>
+                        </div>
+
+                        <div class="md:col-span-5 rounded-2xl overflow-hidden border border-pastel-300 min-h-[200px] bg-pastel-100">
+                            <iframe class="w-full h-full min-h-[220px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.2312!2d110.8252!3d-7.5529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a162a3f0febeb%3A0xa8c652249490591d!2sSheikh%20Zayed%20Grand%20Mosque%20Solo!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Kampung Kecil Solo -->
+                <div id="card-dest-kampung" class="dest-card glass-card p-6 rounded-3xl shadow-sm border border-pastel-200 transition-all">
+                    <div class="grid md:grid-cols-12 gap-6">
+                        <div class="md:col-span-7 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="bg-maroon-100 text-maroon-800 text-[11px] font-bold px-3 py-1 rounded-full font-sans-body border border-maroon-200">
+                                        <i class="fa-solid fa-utensils mr-1"></i> Destinasi 3 • Makan Siang Bersama
+                                    </span>
+                                    <span class="bg-pastel-100 text-pastel-900 text-[11px] font-bold px-2.5 py-1 rounded-full font-sans-body">
+                                        13.15 - 14.30 WIB
+                                    </span>
+                                </div>
+                                <h4 class="text-xl font-bold text-maroon-900 font-goldy mb-2">Resto Kampung Kecil Solo</h4>
+                                <p class="text-xs text-gray-600 leading-relaxed font-sans-body mb-4">
+                                    Restoran berkonsep saung tradisional Sunda & Nusantara yang asri dan luas. Lokasi makan siang rombongan siswa dan guru dengan hidangan khas Nusantara.
+                                </p>
+                                <div class="p-3 bg-pastel-50 rounded-2xl border border-pastel-200 mb-4 font-sans-body text-xs">
+                                    <p class="font-bold text-maroon-900 mb-1"><i class="fa-solid fa-route text-pastel-600 mr-1.5"></i> Estimasi Perjalanan:</p>
+                                    <p class="text-gray-600">Masjid Zayed ➔ Kampung Kecil Solo (~10 menit / 2.5 km via Jl. Monginsidi).</p>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-wrap items-center gap-3 font-sans-body">
+                                <a href="https://maps.google.com/?cid=12757997112409965318" target="_blank" class="px-4 py-2 rounded-xl maroon-gradient text-white text-xs font-bold shadow hover:opacity-90 transition inline-flex items-center gap-2">
+                                    <i class="fa-solid fa-map-location-dot"></i> Buka Google Maps Kampung Kecil
+                                </a>
+                                <span class="text-[11px] text-gray-500 italic"><i class="fa-solid fa-location-dot text-maroon-700 mr-1"></i> Jl. Walter Monginsidi No.14, Jebres</span>
+                            </div>
+                        </div>
+
+                        <div class="md:col-span-5 rounded-2xl overflow-hidden border border-pastel-300 min-h-[200px] bg-pastel-100">
+                            <iframe class="w-full h-full min-h-[220px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.195!2d110.835!3d-7.555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a166f28f8c2ed%3A0xb1b181b76ba7c3b1!2sKampung%20Kecil%20Solo!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Taman Balekambang -->
+                <div id="card-dest-balekambang" class="dest-card glass-card p-6 rounded-3xl shadow-sm border border-pastel-200 transition-all">
+                    <div class="grid md:grid-cols-12 gap-6">
+                        <div class="md:col-span-7 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="bg-maroon-100 text-maroon-800 text-[11px] font-bold px-3 py-1 rounded-full font-sans-body border border-maroon-200">
+                                        <i class="fa-solid fa-tree mr-1"></i> Destinasi 4 • Taman Budaya & Rekreasi
+                                    </span>
+                                    <span class="bg-pastel-100 text-pastel-900 text-[11px] font-bold px-2.5 py-1 rounded-full font-sans-body">
+                                        14.45 - 16.15 WIB
+                                    </span>
+                                </div>
+                                <h4 class="text-xl font-bold text-maroon-900 font-goldy mb-2">Taman Balekambang Solo</h4>
+                                <p class="text-xs text-gray-600 leading-relaxed font-sans-body mb-4">
+                                    Taman bersejarah peninggalan KGPAA Mangkunegara VII yang telah direnovasi secara megah. Memiliki skywalk, danau buatan, gedung pertunjukan seni, dan penangkaran Rusa Jawa.
+                                </p>
+                                <div class="p-3 bg-pastel-50 rounded-2xl border border-pastel-200 mb-4 font-sans-body text-xs">
+                                    <p class="font-bold text-maroon-900 mb-1"><i class="fa-solid fa-route text-pastel-600 mr-1.5"></i> Estimasi Perjalanan:</p>
+                                    <p class="text-gray-600">Kampung Kecil Solo ➔ Taman Balekambang (~12 menit / 3.8 km via Manahan).</p>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-wrap items-center gap-3 font-sans-body">
+                                <a href="https://maps.google.com/?cid=13813267255400608751" target="_blank" class="px-4 py-2 rounded-xl maroon-gradient text-white text-xs font-bold shadow hover:opacity-90 transition inline-flex items-center gap-2">
+                                    <i class="fa-solid fa-map-location-dot"></i> Buka Google Maps Balekambang
+                                </a>
+                                <span class="text-[11px] text-gray-500 italic"><i class="fa-solid fa-location-dot text-maroon-700 mr-1"></i> Jl. Depok, Manahan, Banjarsari</span>
+                            </div>
+                        </div>
+
+                        <div class="md:col-span-5 rounded-2xl overflow-hidden border border-pastel-300 min-h-[200px] bg-pastel-100">
+                            <iframe class="w-full h-full min-h-[220px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.15!2d110.805!3d-7.553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a1636886a85cd%3A0xbfca2221b20f332f!2sBalekambang%20Park!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Museum Lokananta -->
+                <div id="card-dest-lokananta" class="dest-card glass-card p-6 rounded-3xl shadow-sm border border-pastel-200 transition-all">
+                    <div class="grid md:grid-cols-12 gap-6">
+                        <div class="md:col-span-7 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="bg-maroon-100 text-maroon-800 text-[11px] font-bold px-3 py-1 rounded-full font-sans-body border border-maroon-200">
+                                        <i class="fa-solid fa-compact-disc mr-1"></i> Destinasi 5 • Wisata Edukasi Sejarah Musik
+                                    </span>
+                                    <span class="bg-pastel-100 text-pastel-900 text-[11px] font-bold px-2.5 py-1 rounded-full font-sans-body">
+                                        16.30 - 19.00 WIB
+                                    </span>
+                                </div>
+                                <h4 class="text-xl font-bold text-maroon-900 font-goldy mb-2">Museum & Lokananta Bloc Solo</h4>
+                                <p class="text-xs text-gray-600 leading-relaxed font-sans-body mb-4">
+                                    Studio rekaman musik pertama di Indonesia yang berdiri sejak 1956. Menyimpan ribuan piringan hitam master lagu kebangsaan, musik daerah, galeri audio-visual, dan creative hub kekinian.
+                                </p>
+                                <div class="p-3 bg-pastel-50 rounded-2xl border border-pastel-200 mb-4 font-sans-body text-xs">
+                                    <p class="font-bold text-maroon-900 mb-1"><i class="fa-solid fa-route text-pastel-600 mr-1.5"></i> Estimasi Perjalanan:</p>
+                                    <p class="text-gray-600">Taman Balekambang ➔ Museum Lokananta (~8 menit / 2.1 km via Jl. A. Yani Kerten).</p>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-wrap items-center gap-3 font-sans-body">
+                                <a href="https://maps.google.com/?cid=14563640039805080055" target="_blank" class="px-4 py-2 rounded-xl maroon-gradient text-white text-xs font-bold shadow hover:opacity-90 transition inline-flex items-center gap-2">
+                                    <i class="fa-solid fa-map-location-dot"></i> Buka Google Maps Lokananta
+                                </a>
+                                <span class="text-[11px] text-gray-500 italic"><i class="fa-solid fa-location-dot text-maroon-700 mr-1"></i> Jl. A. Yani No.379 A, Kerten</span>
+                            </div>
+                        </div>
+
+                        <div class="md:col-span-5 rounded-2xl overflow-hidden border border-pastel-300 min-h-[200px] bg-pastel-100">
+                            <iframe class="w-full h-full min-h-[220px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.08!2d110.795!3d-7.558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a168e5c622e63%3A0xca147174693cd1d7!2sLokananta%20Bloc!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="organisasi" class="py-10 px-4 max-w-5xl mx-auto">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-9 h-9 rounded-xl maroon-gradient text-white flex items-center justify-center font-bold text-base shadow font-goldy">
+                    2
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold font-goldy text-maroon-900">Struktur Organisasi Panitia</h3>
+                    <p class="text-xs text-pastel-600 font-sans-body">Tim Pelaksana Kegiatan Kunjungan Industri & Kokurikuler</p>
+                </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4 font-sans-body">
+                <!-- Ketua Panitia -->
+                <div class="glass-card p-5 rounded-2xl border border-pastel-200 text-center relative overflow-hidden shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-maroon-100 text-maroon-800 flex items-center justify-center mx-auto mb-3 font-bold text-lg shadow-sm">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-maroon-100 text-maroon-900 uppercase tracking-wider">Ketua Panitia</span>
+                    <h4 class="text-sm font-bold text-maroon-950 mt-2">Tia Afianti, S.Pd</h4>
+                    <p class="text-[11px] text-gray-500 mt-0.5">Penanggung Jawab Utama Acara</p>
+                    <a href="https://wa.me/6288232964258" target="_blank" class="mt-3 inline-flex items-center justify-center gap-1.5 text-xs text-emerald-700 font-bold bg-emerald-50 px-3 py-1.5 rounded-xl border border-emerald-200 hover:bg-emerald-100 transition w-full">
+                        <i class="fa-brands fa-whatsapp text-sm"></i> Hubungi Ketua
+                    </a>
+                </div>
+
+                <!-- Sekretaris -->
+                <div class="glass-card p-5 rounded-2xl border border-pastel-200 text-center relative overflow-hidden shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-pastel-100 text-pastel-800 flex items-center justify-center mx-auto mb-3 font-bold text-lg shadow-sm">
+                        <i class="fa-solid fa-file-pen"></i>
+                    </div>
+                    <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-pastel-200 text-pastel-900 uppercase tracking-wider">Sekretaris</span>
+                    <h4 class="text-sm font-bold text-maroon-950 mt-2">Uswatun Hasanah, S.Pd</h4>
+                    <p class="text-[11px] text-gray-500 mt-0.5">Administrasi & Persuratan</p>
+                    <a href="https://wa.me/6283866439181" target="_blank" class="mt-3 inline-flex items-center justify-center gap-1.5 text-xs text-emerald-700 font-bold bg-emerald-50 px-3 py-1.5 rounded-xl border border-emerald-200 hover:bg-emerald-100 transition w-full">
+                        <i class="fa-brands fa-whatsapp text-sm"></i> Hubungi Sekretaris
+                    </a>
+                </div>
+
+                <!-- Bendahara -->
+                <div class="glass-card p-5 rounded-2xl border border-pastel-200 text-center relative overflow-hidden shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-maroon-100 text-maroon-800 flex items-center justify-center mx-auto mb-3 font-bold text-lg shadow-sm">
+                        <i class="fa-solid fa-wallet"></i>
+                    </div>
+                    <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-maroon-100 text-maroon-900 uppercase tracking-wider">Bendahara</span>
+                    <h4 class="text-sm font-bold text-maroon-950 mt-2">Muhamad Husnan, S.Pd</h4>
+                    <p class="text-[11px] text-gray-500 mt-0.5">Pengelolaan Keuangan</p>
+                    <a href="https://wa.me/6281339875751" target="_blank" class="mt-3 inline-flex items-center justify-center gap-1.5 text-xs text-emerald-700 font-bold bg-emerald-50 px-3 py-1.5 rounded-xl border border-emerald-200 hover:bg-emerald-100 transition w-full">
+                        <i class="fa-brands fa-whatsapp text-sm"></i> Hubungi Bendahara
+                    </a>
+                </div>
+
+                <!-- Koordinator Lapangan -->
+                <div class="glass-card p-5 rounded-2xl border border-pastel-200 text-center relative overflow-hidden shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-pastel-100 text-pastel-800 flex items-center justify-center mx-auto mb-3 font-bold text-lg shadow-sm">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-pastel-200 text-pastel-900 uppercase tracking-wider">Korlap</span>
+                    <h4 class="text-sm font-bold text-maroon-950 mt-2">Aedia Kurniawan, S.Pd</h4>
+                    <p class="text-[11px] text-gray-500 mt-0.5">Logistik & Alur Lapangan</p>
+                    <a href="https://wa.me/6285759942007" target="_blank" class="mt-3 inline-flex items-center justify-center gap-1.5 text-xs text-emerald-700 font-bold bg-emerald-50 px-3 py-1.5 rounded-xl border border-emerald-200 hover:bg-emerald-100 transition w-full">
+                        <i class="fa-brands fa-whatsapp text-sm"></i> Hubungi Korlap
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="pj-siswa" class="py-10 px-4 max-w-5xl mx-auto">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-9 h-9 rounded-xl maroon-gradient text-white flex items-center justify-center font-bold text-base shadow font-goldy">
+                    3
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold font-goldy text-maroon-900">Pembagian Pendamping Siswa</h3>
+                    <p class="text-xs text-pastel-600 font-sans-body">12 Kelompok Pendampingan dalam 1 Armada Bus Perjalanan</p>
+                </div>
+            </div>
+
+            <!-- Single Bus Banner Announcement -->
+            <div class="mb-6 p-4 rounded-2xl bg-gradient-to-r from-maroon-900 via-maroon-800 to-maroon-950 text-white shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3 font-sans-body">
+                <div class="flex items-center gap-3 text-center sm:text-left">
+                    <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-amber-300 text-xl shrink-0">
+                        <i class="fa-solid fa-bus"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-amber-300 bg-white/10 px-2 py-0.5 rounded-full">Informasi Armada</span>
+                        <h4 class="text-sm font-bold text-white mt-0.5">Satu Armada Bus Pariwisata Utama - Pembagian Kelompok Pendamping Siswa</h4>
+                        <p class="text-xs text-maroon-200">Seluruh peserta berada dalam 1 bus yang sama. Pembagian kelompok bertujuan agar supervisi pendampingan oleh guru berjalan optimal selama kegiatan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search Filter for Group / Teacher / Student -->
+            <div class="mb-6 font-sans-body">
+                <div class="relative max-w-md">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3 text-pastel-600 text-xs"></i>
+                    <input type="text" id="searchGroup" onkeyup="filterGroupList()" placeholder="Cari nama guru pendamping, nomor kelompok, atau siswa..." class="w-full text-xs pl-9 pr-4 py-2.5 rounded-2xl border border-pastel-300 focus:outline-none focus:ring-2 focus:ring-maroon-700 bg-white shadow-sm">
+                </div>
+            </div>
+
+            <div id="groupGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 font-sans-body">
+                
+                <!-- KELOMPOK 1 -->
+                <div class="group-item glass-card p-4 rounded-2xl border border-pastel-200 shadow-sm relative overflow-hidden">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="bg-maroon-700 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">KELOMPOK 1</span>
+                        <span class="text-[10px] text-gray-500 font-medium"><i class="fa-solid fa-users text-pastel-600 mr-1"></i> Tim 1</span>
+                    </div>
+                    <div class="space-y-2 border-t border-pastel-200 pt-2.5">
+                        <div>
+                            <p class="text-[10px] text-pastel-600 font-bold uppercase">Guru Pendamping</p>
+                            <p class="text-xs font-bold text-maroon-950">Tia Afianti, S.Pd</p>
+                            <a href="https://wa.me/6288232964258" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 882-3296-5428
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-[10px] text-pastel-600 font-bold uppercase">Nama Siswa</p>
+                            <p class="text-xs font-bold text-gray-800">Farras Amelia Magani XII DKV</p>
+                            <a href="https://wa.me/6287834191364" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 878-3419-1364
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-xs font-bold text-gray-800">Alfazkha Hadi Suseno XII TJKT</p>
+                            <a href="https://wa.me/6285794390308" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 857-9439-0380
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-xs font-bold text-gray-800">Risma Airani XI TJKT</p>
+                            <a href="https://wa.me/6283814973682" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 838-1497-3682
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KELOMPOK 2 -->
+                <div class="group-item glass-card p-4 rounded-2xl border border-pastel-200 shadow-sm relative overflow-hidden">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="bg-maroon-700 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">KELOMPOK 2</span>
+                        <span class="text-[10px] text-gray-500 font-medium"><i class="fa-solid fa-users text-pastel-600 mr-1"></i> Tim 2</span>
+                    </div>
+                    <div class="space-y-2 border-t border-pastel-200 pt-2.5">
+                        <div>
+                            <p class="text-[10px] text-pastel-600 font-bold uppercase">Guru Pendamping</p>
+                            <p class="text-xs font-bold text-maroon-950">Uswatun Hasanah, S.Pd</p>
+                            <a href="https://wa.me/6283866439181" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 838-6643-9181
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-[10px] text-pastel-600 font-bold uppercase">Nama Siswa</p>
+                            <p class="text-xs font-bold text-gray-800">Alifia Sefi Wulandari XII DKV</p>
+                            <a href="https://wa.me/62882003560912" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 882-0035-60912
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-xs font-bold text-gray-800">Arga Dwi Permana XII TJKT</p>
+                            <a href="https://wa.me/6285875067757" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 858-7506-7757
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-xs font-bold text-gray-800">Aufa Hamim XI TJKT</p>
+                            <a href="https://wa.me/6283193129557" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 831-9312-9557
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-xs font-bold text-gray-800">Abdul Aziz Al Hakim XI DKV</p>
+                            <a href="https://wa.me/6282227105780" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 822-2710-5780
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KELOMPOK 3 -->
+                <div class="group-item glass-card p-4 rounded-2xl border border-pastel-200 shadow-sm relative overflow-hidden">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="bg-maroon-700 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">KELOMPOK 3</span>
+                        <span class="text-[10px] text-gray-500 font-medium"><i class="fa-solid fa-users text-pastel-600 mr-1"></i> Tim 3</span>
+                    </div>
+                    <div class="space-y-2 border-t border-pastel-200 pt-2.5">
+                        <div>
+                            <p class="text-[10px] text-pastel-600 font-bold uppercase">Guru Pendamping</p>
+                            <p class="text-xs font-bold text-maroon-950">Aedia Kurniawan, S.Pd</p>
+                            <a href="https://wa.me/6285759942007" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 857-5994-2007
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-[10px] text-pastel-600 font-bold uppercase">Nama Siswa</p>
+                            <p class="text-xs font-bold text-gray-800">Dheas Slamet Lestari XII DKV</p>
+                            <a href="https://wa.me/6285870833778" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 858-7083-3778
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-xs font-bold text-gray-800">Dafa Rasya Pratama XII TJKT</p>
+                            <a href="https://wa.me/6285600695443" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 856-0069-5443
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-xs font-bold text-gray-800">Achmad Kharir Mubarok XII TJKT</p>
+                            <a href="https://wa.me/6285600795905" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 856-0079-5905
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KELOMPOK 4 -->
+                <div class="group-item glass-card p-4 rounded-2xl border border-pastel-200 shadow-sm relative overflow-hidden">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="bg-maroon-700 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">KELOMPOK 4</span>
+                        <span class="text-[10px] text-gray-500 font-medium"><i class="fa-solid fa-users text-pastel-600 mr-1"></i> Tim 4</span>
+                    </div>
+                    <div class="space-y-2 border-t border-pastel-200 pt-2.5">
+                        <div>
+                            <p class="text-[10px] text-pastel-600 font-bold uppercase">Guru Pendamping</p>
+                            <p class="text-xs font-bold text-maroon-950">Muhamad Husnan, S.Pd</p>
+                            <a href="https://wa.me/6281339875751" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 813-3987-5751
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-[10px] text-pastel-600 font-bold uppercase">Nama Siswa</p>
+                            <p class="text-xs font-bold text-gray-800">Asdaqul Ulya XII DKV</p>
+                            <a href="https://wa.me/6285726827817" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 857-2682-7817
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-xs font-bold text-gray-800">Khafid Ulul Ngilmi XII TJKT</p>
+                            <a href="https://wa.me/628812833176" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 881-2833-76
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-xs font-bold text-gray-800">Salsabila Muti Sava Auva XI TJKT</p>
+                            <a href="https://wa.me/62882005027488" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 882-0050-27488
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KELOMPOK 5 -->
+                <div class="group-item glass-card p-4 rounded-2xl border border-pastel-200 shadow-sm relative overflow-hidden">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="bg-maroon-700 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">KELOMPOK 5</span>
+                        <span class="text-[10px] text-gray-500 font-medium"><i class="fa-solid fa-users text-pastel-600 mr-1"></i> Tim 5</span>
+                    </div>
+                    <div class="space-y-2 border-t border-pastel-200 pt-2.5">
+                        <div>
+                            <p class="text-[10px] text-pastel-600 font-bold uppercase">Guru Pendamping</p>
+                            <p class="text-xs font-bold text-maroon-950">Nur Gerhanawati Budiningsih, S.Pd</p>
+                            <a href="https://wa.me/6282324408983" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 823-2440-8983
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-[10px] text-pastel-600 font-bold uppercase">Nama Siswa</p>
+                            <p class="text-xs font-bold text-gray-800">Faniya Dwi Setyaningrum XII DKV</p>
+                            <a href="https://wa.me/6285643034405" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 856-4303-4405
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-xs font-bold text-gray-800">Khoirul Khabib XII TJKT</p>
+                            <a href="https://wa.me/6285169911473" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 881-2833-76
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-xs font-bold text-gray-800">Delia Pratiwi XI TJKT</p>
+                            <a href="https://wa.me/62882007651879" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 851-6991-1473
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KELOMPOK 6 -->
+                <div class="group-item glass-card p-4 rounded-2xl border border-pastel-200 shadow-sm relative overflow-hidden">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="bg-maroon-700 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">KELOMPOK 6</span>
+                        <span class="text-[10px] text-gray-500 font-medium"><i class="fa-solid fa-users text-pastel-600 mr-1"></i> Tim 6</span>
+                    </div>
+                    <div class="space-y-2 border-t border-pastel-200 pt-2.5">
+                        <div>
+                            <p class="text-[10px] text-pastel-600 font-bold uppercase">Guru Pendamping</p>
+                            <p class="text-xs font-bold text-maroon-950">Arum Endah Susilawati, S.Pd</p>
+                            <a href="https://wa.me/6285601137233" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 856-0113-7233
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-[10px] text-pastel-600 font-bold uppercase">Nama Siswa</p>
+                            <p class="text-xs font-bold text-gray-800">Fitrah Dwiyana XII DKV</p>
+                            <a href="https://wa.me/6283146459249" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 831-4645-9249
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-xs font-bold text-gray-800">Putra Gunawan XII TJKT</p>
+                            <a href="https://wa.me/6288980694745" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 889-8069-4745
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-xs font-bold text-gray-800">Randi Ainu Rifan XI TJKT</p>
+                            <a href="https://wa.me/6282147969384" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 821-4796-9384
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KELOMPOK 7 -->
+                <div class="group-item glass-card p-4 rounded-2xl border border-pastel-200 shadow-sm relative overflow-hidden">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="bg-maroon-700 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">KELOMPOK 7</span>
+                        <span class="text-[10px] text-gray-500 font-medium"><i class="fa-solid fa-users text-pastel-600 mr-1"></i> Tim 7</span>
+                    </div>
+                    <div class="space-y-2 border-t border-pastel-200 pt-2.5">
+                        <div>
+                            <p class="text-[10px] text-pastel-600 font-bold uppercase">Guru Pendamping</p>
+                            <p class="text-xs font-bold text-maroon-950">Nida Prilla Edijana, S.Kom</p>
+                            <a href="https://wa.me/6285194516245" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 812-9451-6245
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-[10px] text-pastel-600 font-bold uppercase">Nama Siswa</p>
+                            <p class="text-xs font-bold text-gray-800">Rizki Taufiqur Rohman XII DKV</p>
+                            <a href="https://wa.me/6288225175123" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 882-2517-5123
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-xs font-bold text-gray-800">Okta Viano Sukma XII TJKT</p>
+                            <a href="https://wa.me/6285643281847" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 856-4328-1847
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-xs font-bold text-gray-800">Ghattan Akbar XI DKV</p>
+                            <a href="https://wa.me/6285113746515" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 851-1374-6515
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KELOMPOK 8 -->
+                <div class="group-item glass-card p-4 rounded-2xl border border-pastel-200 shadow-sm relative overflow-hidden">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="bg-maroon-700 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">KELOMPOK 8</span>
+                        <span class="text-[10px] text-gray-500 font-medium"><i class="fa-solid fa-users text-pastel-600 mr-1"></i> Tim 8</span>
+                    </div>
+                    <div class="space-y-2 border-t border-pastel-200 pt-2.5">
+                        <div>
+                            <p class="text-[10px] text-pastel-600 font-bold uppercase">Guru Pendamping</p>
+                            <p class="text-xs font-bold text-maroon-950">Himmatul Khoiriyyah, S.Pd</p>
+                            <a href="https://wa.me/6282223135403" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 822-2313-5403
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-[10px] text-pastel-600 font-bold uppercase">Nama Siswa</p>
+                            <p class="text-xs font-bold text-gray-800">Phasa Nur Fitriansyah XII DKV</p>
+                            <a href="https://wa.me/628882587809" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 888-2587-809
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-xs font-bold text-gray-800">Muhammad Fatikh Muzaka XII TJKT</p>
+                            <a href="https://wa.me/6281328537090" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 813-2853-7090
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-xs font-bold text-gray-800">Muhammad Zidan Muzaky XI TJKT</p>
+                            <a href="https://wa.me/6288216044024" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 882-1604-4024
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KELOMPOK 9 -->
+                <div class="group-item glass-card p-4 rounded-2xl border border-pastel-200 shadow-sm relative overflow-hidden">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="bg-maroon-700 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">KELOMPOK 9</span>
+                        <span class="text-[10px] text-gray-500 font-medium"><i class="fa-solid fa-users text-pastel-600 mr-1"></i> Tim 9</span>
+                    </div>
+                    <div class="space-y-2 border-t border-pastel-200 pt-2.5">
+                        <div>
+                            <p class="text-[10px] text-pastel-600 font-bold uppercase">Guru Pendamping</p>
+                            <p class="text-xs font-bold text-maroon-950">As'ad Hanif, S.Kom</p>
+                            <a href="https://wa.me/6289503251462" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 895-0325-1462
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-[10px] text-pastel-600 font-bold uppercase">Nama Siswa</p>
+                            <p class="text-xs font-bold text-gray-800">Zakaria Ngabidin XII DKV</p>
+                            <a href="https://wa.me/6283825961021" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 838-2596-1021
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-xs font-bold text-gray-800">Adli Dzil Ikram XI TJKT</p>
+                            <a href="https://wa.me/6285966430493" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 859-6643-0493
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-xs font-bold text-gray-800">Daffa Dhiya'ulhaq Alfarezza XI DKV</p>
+                            <a href="https://wa.me/6285975032655" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 859-7503-2655
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KELOMPOK 10 -->
+                <div class="group-item glass-card p-4 rounded-2xl border border-pastel-200 shadow-sm relative overflow-hidden">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="bg-maroon-700 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">KELOMPOK 10</span>
+                        <span class="text-[10px] text-gray-500 font-medium"><i class="fa-solid fa-users text-pastel-600 mr-1"></i> Tim 10</span>
+                    </div>
+                    <div class="space-y-2 border-t border-pastel-200 pt-2.5">
+                        <div>
+                            <p class="text-[10px] text-pastel-600 font-bold uppercase">Guru Pendamping</p>
+                            <p class="text-xs font-bold text-maroon-950">Wahyu Al Alif, S.Kom</p>
+                            <a href="https://wa.me/6285775040400" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 857-7504-0400
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-[10px] text-pastel-600 font-bold uppercase">Nama Siswa</p>
+                            <p class="text-xs font-bold text-gray-800">Silvi Zenia Putri XII DKV</p>
+                            <a href="https://wa.me/6285718447409" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 857-1844-7409
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-xs font-bold text-gray-800">Muhammad Nuril Anwar XII TJKT</p>
+                            <a href="https://wa.me/6285731143393" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 857-3114-3393
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-xs font-bold text-gray-800">Attalarick Afdansyah XI DKV</p>
+                            <a href="https://wa.me/62882005084007" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 882-0050-84007
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KELOMPOK 11 -->
+                <div class="group-item glass-card p-4 rounded-2xl border border-pastel-200 shadow-sm relative overflow-hidden">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="bg-maroon-700 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">KELOMPOK 11</span>
+                        <span class="text-[10px] text-gray-500 font-medium"><i class="fa-solid fa-users text-pastel-600 mr-1"></i> Tim 11</span>
+                    </div>
+                    <div class="space-y-2 border-t border-pastel-200 pt-2.5">
+                        <div>
+                            <p class="text-[10px] text-pastel-600 font-bold uppercase">Guru Pendamping</p>
+                            <p class="text-xs font-bold text-maroon-950">Iqbal Rifki Wafda, S.Pd</p>
+                            <a href="https://wa.me/62895614982900" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 895-6149-82900
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-[10px] text-pastel-600 font-bold uppercase">Nama Siswa</p>
+                            <p class="text-xs font-bold text-gray-800">Muhammad Adli Emirul Fata XII DKV</p>
+                            <a href="https://wa.me/6287844184842" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 878-4418-4842
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-xs font-bold text-gray-800">Syaifa Gading Aditya XII TJKT</p>
+                            <a href="https://wa.me/6281326794313" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 813-2679-4313
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-xs font-bold text-gray-800">Setyo Aji XI DKV</p>
+                            <a href="https://wa.me/6285727437388" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 857-2743-7388
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KELOMPOK 12 -->
+                <div class="group-item glass-card p-4 rounded-2xl border border-pastel-200 shadow-sm relative overflow-hidden">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="bg-maroon-700 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">KELOMPOK 12</span>
+                        <span class="text-[10px] text-gray-500 font-medium"><i class="fa-solid fa-users text-pastel-600 mr-1"></i> Tim 12</span>
+                    </div>
+                    <div class="space-y-2 border-t border-pastel-200 pt-2.5">
+                        <div>
+                            <p class="text-[10px] text-pastel-600 font-bold uppercase">Guru Pendamping</p>
+                            <p class="text-xs font-bold text-maroon-950">Good Eko Prasetyantoro, S.Kom</p>
+                            <a href="https://wa.me/6287824104150" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 878-2410-4150
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-[10px] text-pastel-600 font-bold uppercase">Nama Siswa</p>
+                            <p class="text-xs font-bold text-gray-800">Ahmad Ubaidillah XII TJKT</p>
+                            <a href="https://wa.me/6289688001414" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 896-8800-1414
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-xs font-bold text-gray-800">Yusuf Ismail XII TJKT</p>
+                            <a href="https://wa.me/6282136447440" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 821-3644-7440
+                            </a>
+                        </div>
+                        <div class="pt-1.5 border-t border-dashed border-pastel-200">
+                            <p class="text-xs font-bold text-gray-800">Andin Khamid Mustakim XI DKV</p>
+                            <a href="https://wa.me/6285848026651" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold hover:underline mt-0.5">
+                                <i class="fa-brands fa-whatsapp"></i> +62 858-4802-6651
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="pj-destinasi" class="py-10 px-4 max-w-5xl mx-auto">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-9 h-9 rounded-xl maroon-gradient text-white flex items-center justify-center font-bold text-base shadow font-goldy">
+                    4
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold font-goldy text-maroon-900">Penanggung Jawab Tempat Tujuan</h3>
+                    <p class="text-xs text-pastel-600 font-sans-body">Kontak Pendamping di Tempat Kunjungan</p>
+                </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 font-sans-body">
+                <!-- PJ 1: ISI Surakarta -->
+                <div class="glass-card p-5 rounded-2xl border border-pastel-200 shadow-sm">
+                    <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-maroon-100 text-maroon-900 border border-maroon-200">1. ISI Surakarta</span>
+                    <h4 class="text-sm font-bold text-maroon-950 mt-2.5">Tim ISI Surakarta</h4>
+                    <p class="text-xs text-gray-600 mt-1"><i class="fa-solid fa-user text-pastel-600 mr-1"></i> Iqbal Rifki Wafda, S.Pd.</p>
+                    <p class="text-xs text-emerald-700 font-bold mt-1.5"><i class="fa-solid fa-phone text-xs mr-1"></i> +62 895-6149-82900</p>
+                </div>
+
+                <!-- PJ 2: Masjid Sheikh Zayed -->
+                <div class="glass-card p-5 rounded-2xl border border-pastel-200 shadow-sm">
+                    <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-pastel-200 text-pastel-900">2. Masjid Zayed</span>
+                    <h4 class="text-sm font-bold text-maroon-950 mt-2.5">Tim Masjid Syeikh Zayed</h4>
+                    <p class="text-xs text-gray-600 mt-1"><i class="fa-solid fa-user text-pastel-600 mr-1"></i> Uswatun Hasanah, S.Pd.</p>
+                    <p class="text-xs text-emerald-700 font-bold mt-1.5"><i class="fa-solid fa-phone text-xs mr-1"></i> +62 838-6643-9181</p>
+                </div>
+
+                <!-- PJ 3: Resto Kampung Kecil Solo -->
+                <div class="glass-card p-5 rounded-2xl border border-pastel-200 shadow-sm">
+                    <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-maroon-100 text-maroon-900 border border-maroon-200">3. Resto Kampung Kecil</span>
+                    <h4 class="text-sm font-bold text-maroon-950 mt-2.5">Tim Kampung Kecil Solo</h4>
+                    <p class="text-xs text-gray-600 mt-1"><i class="fa-solid fa-user text-pastel-600 mr-1"></i> Muhamad Husnan, S.Pd</p>
+                    <p class="text-xs text-emerald-700 font-bold mt-1.5"><i class="fa-solid fa-phone text-xs mr-1"></i> +62 813-3987-5751</p>
+                </div>
+
+                <!-- PJ 4: Taman Balekambang -->
+                <div class="glass-card p-5 rounded-2xl border border-pastel-200 shadow-sm">
+                    <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-pastel-200 text-pastel-900">4. Taman Balekambang</span>
+                    <h4 class="text-sm font-bold text-maroon-950 mt-2.5">Tim Taman Balekambang</h4>
+                    <p class="text-xs text-gray-600 mt-1"><i class="fa-solid fa-user text-pastel-600 mr-1"></i> Aedia Kurniawan, S.Pd</p>
+                    <p class="text-xs text-emerald-700 font-bold mt-1.5"><i class="fa-solid fa-phone text-xs mr-1"></i> +62 857-5994-2007</p>
+                </div>
+
+                <!-- PJ 5: Museum Lokananta -->
+                <div class="glass-card p-5 rounded-2xl border border-pastel-200 shadow-sm md:col-span-2">
+                    <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-maroon-100 text-maroon-900 border border-maroon-200">5. Museum Lokananta</span>
+                    <h4 class="text-sm font-bold text-maroon-950 mt-2.5">Tim Lokananta Bloc</h4>
+                    <p class="text-xs text-gray-600 mt-1"><i class="fa-solid fa-user text-pastel-600 mr-1"></i> Tia Afianti, S.Pd</p>
+                    <p class="text-xs text-emerald-700 font-bold mt-1.5"><i class="fa-solid fa-phone text-xs mr-1"></i> +62 882-3296-4258</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rundown Section -->
+        <section id="rundown" class="py-10 px-4 max-w-5xl mx-auto">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-9 h-9 rounded-xl maroon-gradient text-white flex items-center justify-center font-bold text-base shadow font-goldy">
+                    5
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold font-goldy text-maroon-900">Rundown & Susunan Acara</h3>
+                    <p class="text-xs text-pastel-600 font-sans-body">Jadwal Perjalanan Runtut dari Keberangkatan hingga Kepulangan</p>
+                </div>
+            </div>
+
+            <div class="glass-card p-6 md:p-8 rounded-3xl shadow-sm border border-pastel-200 font-sans-body">
+                <div class="relative border-l-2 border-maroon-300 ml-4 space-y-6 py-2">
+                    
+                    <!-- Item 1 -->
+                    <div class="relative pl-6">
+                        <div class="absolute -left-2.5 top-1.5 w-5 h-5 rounded-full maroon-gradient border-2 border-white shadow"></div>
+                        <span class="text-[10px] font-bold px-2.5 py-0.5 rounded bg-maroon-100 text-maroon-900">06.30 - 07.30 WIB</span>
+                        <h4 class="text-sm font-bold text-maroon-950 mt-1 font-goldy text-base">Titik Kumpul & Presensi Siswa</h4>
+                        <p class="text-xs text-gray-600 mt-0.5">Seluruh peserta berkumpul di Sekolah untuk naik ke Bus Utama. Pengecekan atribut dan kelompok oleh Panitia.</p>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="relative pl-6">
+                        <div class="absolute -left-2.5 top-1.5 w-5 h-5 rounded-full bg-pastel-500 border-2 border-white shadow"></div>
+                        <span class="text-[10px] font-bold px-2.5 py-0.5 rounded bg-pastel-100 text-pastel-900">07.30 - 10.00 WIB</span>
+                        <h4 class="text-sm font-bold text-maroon-950 mt-1 font-goldy text-base">Perjalanan Menuju ISI Surakarta</h4>
+                        <p class="text-xs text-gray-600 mt-0.5">Keberangkatan rombongan bus utama via Tol/Jalan Utama.</p>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="relative pl-6">
+                        <div class="absolute -left-2.5 top-1.5 w-5 h-5 rounded-full maroon-gradient border-2 border-white shadow"></div>
+                        <span class="text-[10px] font-bold px-2.5 py-0.5 rounded bg-maroon-100 text-maroon-900">10.00 - 12.00 WIB</span>
+                        <h4 class="text-sm font-bold text-maroon-950 mt-1 font-goldy text-base">Kunjungan Industri di ISI Surakarta</h4>
+                        <p class="text-xs text-gray-600 mt-0.5">Penyambutan oleh Humas ISI Surakarta, observasi galeri FSRD, studio animasi FBK, dan panggung pertunjukan FSP.</p>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="relative pl-6">
+                        <div class="absolute -left-2.5 top-1.5 w-5 h-5 rounded-full bg-pastel-500 border-2 border-white shadow"></div>
+                        <span class="text-[10px] font-bold px-2.5 py-0.5 rounded bg-pastel-100 text-pastel-900">12.00 - 13.00 WIB</span>
+                        <h4 class="text-sm font-bold text-maroon-950 mt-1 font-goldy text-base">Sholat Dzuhur di Masjid Sheikh Zayed Solo</h4>
+                        <p class="text-xs text-gray-600 mt-0.5">Rombongan menuju Masjid Zayed untuk pelaksanaan sholat Dzuhur berjamaah dan foto bersama di pelataran masjid.</p>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="relative pl-6">
+                        <div class="absolute -left-2.5 top-1.5 w-5 h-5 rounded-full maroon-gradient border-2 border-white shadow"></div>
+                        <span class="text-[10px] font-bold px-2.5 py-0.5 rounded bg-maroon-100 text-maroon-900">13.00 - 14.30 WIB</span>
+                        <h4 class="text-sm font-bold text-maroon-950 mt-1 font-goldy text-base">Makan Siang di Resto Kampung Kecil Solo</h4>
+                        <p class="text-xs text-gray-600 mt-0.5">Makan siang bersama seluruh rombongan di saung lesehan Resto Kampung Kecil.</p>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="relative pl-6">
+                        <div class="absolute -left-2.5 top-1.5 w-5 h-5 rounded-full bg-pastel-500 border-2 border-white shadow"></div>
+                        <span class="text-[10px] font-bold px-2.5 py-0.5 rounded bg-pastel-100 text-pastel-900">15.00 - 16.30 WIB</span>
+                        <h4 class="text-sm font-bold text-maroon-950 mt-1 font-goldy text-base">Wisata Rekreasi Taman Balekambang</h4>
+                        <p class="text-xs text-gray-600 mt-0.5">Eksplorasi keindahan skywalk, taman rusa, dan danau Taman Balekambang Solo.</p>
+                    </div>
+
+                    <!-- Item 7 -->
+                    <div class="relative pl-6">
+                        <div class="absolute -left-2.5 top-1.5 w-5 h-5 rounded-full maroon-gradient border-2 border-white shadow"></div>
+                        <span class="text-[10px] font-bold px-2.5 py-0.5 rounded bg-maroon-100 text-maroon-900">17.00 - 19.00 WIB</span>
+                        <h4 class="text-sm font-bold text-maroon-950 mt-1 font-goldy text-base">Wisata Edukasi Museum Lokananta</h4>
+                        <p class="text-xs text-gray-600 mt-0.5">Mengenal sejarah piringan hitam Indonesia, studio rekaman bersejarah, dan area Lokananta Bloc.</p>
+                    </div>
+
+                    <!-- Item 8 -->
+                    <div class="relative pl-6">
+                        <div class="absolute -left-2.5 top-1.5 w-5 h-5 rounded-full bg-pastel-500 border-2 border-white shadow"></div>
+                        <span class="text-[10px] font-bold px-2.5 py-0.5 rounded bg-pastel-100 text-pastel-900">19.00 WIB - Selesai</span>
+                        <h4 class="text-sm font-bold text-maroon-950 mt-1 font-goldy text-base">Perjalanan Kepulangan Rombongan</h4>
+                        <p class="text-xs text-gray-600 mt-0.5">Pengecekan akhir peserta di bus oleh Guru Pendamping masing-masing kelompok dan perjalanan kembali menuju sekolah.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Rules & Checklist Section -->
+        <section id="tatatertib" class="py-10 px-4 max-w-5xl mx-auto">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-9 h-9 rounded-xl maroon-gradient text-white flex items-center justify-center font-bold text-base shadow font-goldy">
+                    6
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold font-goldy text-maroon-900">Tata Tertib & Perlengkapan Siswa</h3>
+                    <p class="text-xs text-pastel-600 font-sans-body">Pedoman Keselamatan, Etika & Interactive Packing Checklist</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 font-sans-body">
+                
+                <!-- Interactive Checklist Barang -->
+                <div class="glass-card p-6 rounded-3xl shadow-sm border border-pastel-200">
+                    <h4 class="text-base font-bold text-maroon-950 font-goldy mb-1 flex items-center gap-2">
+                        <i class="fa-solid fa-list-check text-pastel-600"></i> Checklist Perlengkapan Wajib
+                    </h4>
+                    <p class="text-[11px] text-gray-500 mb-4">Centang perlengkapan yang sudah kamu siapkan di dalam tas:</p>
+
+                    <div class="space-y-2.5 text-xs">
+                        <label class="flex items-center gap-3 p-2.5 rounded-xl bg-white border border-pastel-200 cursor-pointer hover:bg-pastel-50 transition">
+                            <input type="checkbox" class="w-4 h-4 rounded text-maroon-700 focus:ring-maroon-700 border-pastel-300">
+                            <span class="text-gray-800 font-medium">Seragam Sekolah (Wearpack)</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-2.5 rounded-xl bg-white border border-pastel-200 cursor-pointer hover:bg-pastel-50 transition">
+                            <input type="checkbox" class="w-4 h-4 rounded text-maroon-700 focus:ring-maroon-700 border-pastel-300">
+                            <span class="text-gray-800 font-medium">Smartphone (+charger) & Sudah diisi kuota internet</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-2.5 rounded-xl bg-white border border-pastel-200 cursor-pointer hover:bg-pastel-50 transition">
+                            <input type="checkbox" class="w-4 h-4 rounded text-maroon-700 focus:ring-maroon-700 border-pastel-300">
+                            <span class="text-gray-800 font-medium">Perlengkapan Ibadah</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-2.5 rounded-xl bg-white border border-pastel-200 cursor-pointer hover:bg-pastel-50 transition">
+                            <input type="checkbox" class="w-4 h-4 rounded text-maroon-700 focus:ring-maroon-700 border-pastel-300">
+                            <span class="text-gray-800 font-medium">Obat-obatan Pribadi & Alat Tulis Catatan</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-2.5 rounded-xl bg-white border border-pastel-200 cursor-pointer hover:bg-pastel-50 transition">
+                            <input type="checkbox" class="w-4 h-4 rounded text-maroon-700 focus:ring-maroon-700 border-pastel-300">
+                            <span class="text-gray-800 font-medium">Botol Minum (Tumbler) & Payung/Jas Hujan Lipat</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Tata Tertib Siswa -->
+                <div class="glass-card p-6 rounded-3xl shadow-sm border border-maroon-200 bg-gradient-to-b from-white to-maroon-50/20">
+                    <h4 class="text-base font-bold text-maroon-950 font-goldy mb-1 flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved text-maroon-700"></i> Tata Tertib & Etika Kunjungan
+                    </h4>
+                    <p class="text-[11px] text-gray-500 mb-4">Aturan yang wajib dipatuhi seluruh siswa selama kegiatan:</p>
+
+                    <div class="space-y-2.5 text-xs">
+                        <div class="flex items-start gap-3 p-2.5 rounded-xl bg-white border border-maroon-100">
+                            <i class="fa-solid fa-clock text-maroon-700 mt-0.5"></i>
+                            <p class="text-gray-700"><strong>Disiplin Waktu:</strong> Selalu berkumpul tepat waktu sesuai jadwal & arahan Guru Pendamping Kelompok.</p>
+                        </div>
+                        <div class="flex items-start gap-3 p-2.5 rounded-xl bg-white border border-maroon-100">
+                            <i class="fa-solid fa-hand-holding-hand text-maroon-700 mt-0.5"></i>
+                            <p class="text-gray-700"><strong>Menjaga Karya & Fasilitas:</strong> Dilarang menyentuh pameran seni di ISI / Lokananta tanpa izin.</p>
+                        </div>
+                        <div class="flex items-start gap-3 p-2.5 rounded-xl bg-white border border-maroon-100">
+                            <i class="fa-solid fa-mosque text-maroon-700 mt-0.5"></i>
+                            <p class="text-gray-700"><strong>Etika di Tempat Ibadah:</strong> Berpakaian sopan & menjaga ketenangan saat di Masjid Zayed.</p>
+                        </div>
+                        <div class="flex items-start gap-3 p-2.5 rounded-xl bg-white border border-maroon-100">
+                            <i class="fa-solid fa-trash-can text-maroon-700 mt-0.5"></i>
+                            <p class="text-gray-700"><strong>Kebersihan & Ketertiban:</strong> Tidak membuang sampah sembarangan dan tidak memisahkan diri dari kelompok.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-maroon-950 text-white py-10 px-4 mt-12 border-t border-maroon-800 font-sans-body">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div>
+                <p class="font-goldy font-bold text-lg text-maroon-100">Web Booklet Kunjungan Industri & Tour Solo</p>
+                <p class="text-xs text-maroon-300 mt-0.5">ISI Surakarta • Masjid Zayed • Resto Kampung Kecil • Balekambang • Lokananta</p>
+            </div>
+            <div class="text-xs text-maroon-300 space-y-1">
+                <p><i class="fa-solid fa-phone mr-1.5 text-pastel-300"></i> Posko Panitia: +62 857-5994-2007</p>
+                <p class="text-[11px] text-maroon-400">Dirancang responsif untuk kenyamanan dibaca di layar HP siswa & guru.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Destination Filter Functionality
+        function filterDestinasi(target) {
+            const cards = document.querySelectorAll('.dest-card');
+            const btns = document.querySelectorAll('.dest-btn');
+
+            // Reset button styles
+            btns.forEach(btn => {
+                btn.className = 'dest-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-gray-700 hover:bg-pastel-100 border border-pastel-200';
+            });
+
+            // Highlight active button
+            const activeBtn = document.getElementById('btn-dest-' + target);
+            if (activeBtn) {
+                activeBtn.className = 'dest-btn px-4 py-2 rounded-xl text-xs font-bold maroon-gradient text-white shadow-sm';
+            }
+
+            // Show or hide cards
+            cards.forEach(card => {
+                if (target === 'all') {
+                    card.classList.remove('hidden');
+                } else {
+                    if (card.id === 'card-dest-' + target) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                }
+            });
+
+        }
+
+        // Group Search Filter Function
+        function filterGroupList() {
+            const input = document.getElementById('searchGroup').value.toLowerCase();
+            const groupItems = document.querySelectorAll('.group-item');
+
+            groupItems.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(input)) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
